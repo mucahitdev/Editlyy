@@ -9,6 +9,6 @@ struct Tool: Identifiable {
 }
 
 enum ToolType {
-    case videoToGif
-    case trimVideo
+    case compressVideo
+    case compressImage
 }

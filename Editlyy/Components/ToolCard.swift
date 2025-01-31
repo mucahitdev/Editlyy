@@ -22,6 +22,7 @@ struct ToolCard: View {
                 
                 Text(tool.name)
                     .font(.headline)
+                    .lineLimit(2)
             }
             
             // Description
@@ -32,7 +33,7 @@ struct ToolCard: View {
 
             Spacer()
             // Action button
-            PrimaryButton(title: "Start", icon: "play.fill") {
+            PrimaryButton(title: "Select", icon: "play.fill") {
                 navigateToEdit = true // Geçişi tetikleme
             }
         }
@@ -50,5 +51,5 @@ struct ToolCard: View {
 }
 
 #Preview {
-    ToolCard(tool: Tool(name: "as", icon: "kes", description: "kl", type: .videoToGif))
+    ToolCard(tool: Tool(name: "as", icon: "kes", description: "kl", type: .compressImage))
 }

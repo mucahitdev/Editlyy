@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct EditAreaView: View {
-    
     let type: ToolType
+    
     var body: some View {
-        
-        Text("Hello, World \(type)")
+        Group {
+            switch type {
+            case .compressImage:
+                CompressImageView()
+            case .compressVideo:
+                CompressImageView()
+            }
+        }
+        .navigationTitle(title(for: type))
+    }
+    
+    private func title(for type: ToolType) -> String {
+        switch type {
+        case .compressImage: return "Compress Image"
+        case .compressVideo: return "Compress Video"
+        }
     }
 }
 
 #Preview {
-    EditAreaView(type: .videoToGif)
+    EditAreaView(type: .compressImage)
 }
+

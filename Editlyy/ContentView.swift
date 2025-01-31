@@ -16,16 +16,16 @@ struct ContentView: View {
     // Sample tools - later we can move this to ViewModel
     @State private var tools: [Tool] = [
         Tool(
-            name: "Video to GIF",
-            icon: "arrow.right.circle.fill",
-            description: "Convert your videos to animated GIFs",
-            type: .videoToGif
+            name: "Compress Image",
+            icon: "arrow.down.circle.fill",
+            description: "Reduce the size of your images",
+            type: .compressImage
         ),
         Tool(
-            name: "Trim Video",
-            icon: "scissors.circle.fill",
-            description: "Cut and trim your videos easily",
-            type: .trimVideo
+            name: "Compress Video",
+            icon: "arrow.down.circle.fill",
+            description: "Reduce the size of your videos",
+            type: .compressVideo
         )
     ]
     
